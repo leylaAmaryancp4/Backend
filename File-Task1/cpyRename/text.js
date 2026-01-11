@@ -1,0 +1,26 @@
+const fs = require("fs");
+fs.writeFile("mycopy.txt", " Hello ! How are you? Create origin file and copy text", (err) => {
+  if (err) {
+    console.log("Error while create file.", err);
+    return;
+  }
+  console.log("File created successfully.");
+  
+  fs.copyFile("text.js", "mycopy.txt", (err) => {
+    if (err) {
+      console.log("Coppying file failed", err);
+      return;
+    }
+    console.log("file copied successfully");
+    fs.rename("mycopy.txt", "renamed.txt",(err)=>{
+        if(err){
+            console.log("Rename file faild")
+            return
+        }
+        console.log("rename file successed");
+    });
+    console.log("- mycopy.txt");
+    console.log(" - renamed.txt ")
+    
+  });
+});
