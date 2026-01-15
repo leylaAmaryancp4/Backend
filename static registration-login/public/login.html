@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/csspages/login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+
+    <form method="POST" action="/api/login">
+  <label>Email</label>
+  <input name="email" required>
+
+  <label>Password</label>
+  <input type="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="/register.html">Register</a></p>
+  </div>
+</body>
+</html>
