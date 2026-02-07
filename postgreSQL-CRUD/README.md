@@ -25,9 +25,11 @@ This will create all tables with:
 
 
 -> Run the SQL file that contains your seed data and queries
+\i  queries.sql
 
 This will:
 .Insert initial data into your tables
 .Run SELECT queries to view data
 .Run UPDATE queries to modify data
+
 .Run DELETE queries to remove data
